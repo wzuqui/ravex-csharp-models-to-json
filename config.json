@@ -1,0 +1,17 @@
+{
+  "include": [
+    "C:\\Projetos\\longopercurso\\Source\\LongoPercurso\\RavexSolution.LongoPercurso.Application\\ViewModels\\**\\*ViewModel.cs",
+    "C:\\Projetos\\longopercurso\\Source\\LongoPercurso\\RavexSolution.LongoPercurso.Domain\\AggregatesModel\\VeiculoTipoAggregate\\DisposicaoTipo.cs",
+    "C:\\Projetos\\identity\\Source\\RavexSolution.Core.Infra.CrossCutting.Identity\\Interfaces\\IUser.cs"
+  ],
+  "exclude": [],
+  "output": "./src/api.ts",
+  "camelCase": true,
+  "camelCaseEnums": true,
+  "numericEnums": true,
+  "stringLiteralTypesInsteadOfEnums": false,
+  "customTypeTranslations": {
+    "ProductName": "string",
+    "ProductNumber": "string"
+  }
+}
