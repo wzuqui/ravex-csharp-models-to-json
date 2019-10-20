@@ -90,8 +90,8 @@ const createConverter = config => {
                 rows.push(`    ${convertProperty(member)};`);
             });
 
-            rows.push(`}\n`);
-            generateKeyOf(rows, enum_.Identifier);
+            rows.push(`}`);
+            generateKeyOf(rows, model.ModelName);
         }
 
         return rows;
@@ -127,7 +127,7 @@ const createConverter = config => {
                 }
             });
 
-            rows.push(`}\n`);
+            rows.push(`}`);
             generateKeyOf(rows, enum_.Identifier);
         }
 
@@ -143,8 +143,8 @@ const createConverter = config => {
         entries.forEach((value, index) => {
             rows.push(`    ${value[1]};`);
         });
-        rows.push(`}\n`);
-        generateKeyOf(rows, enum_.Identifier);
+        rows.push(`}`);
+        generateKeyOf(rows, enumeration.Identifier);
 
         return rows;
     };
@@ -200,7 +200,7 @@ const createConverter = config => {
 
 function generateKeyOf(rows, identifier) {
     rows.push(`type T${identifier} = keyof ${identifier};`);
-    rows.push(`}\n`);
+    rows.push(`\n`);
 }
 
 

@@ -14,6 +14,8 @@ export class ComboViewModel {
     subdescricao: string;
     imagem: string;
 }
+type TComboViewModel = keyof ComboViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\PivotAggregate\PivotViewModel.cs
 export class PivotViewModel {
@@ -26,6 +28,8 @@ export class PivotViewModel {
     nomeAclimatacao: string;
     programacaoStatus: string;
 }
+type TPivotViewModel = keyof PivotViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\PrioridadeAlocacaoAggregate\PrioridadeAlocacaoViewModel.cs
 export class PrioridadeAlocacaoViewModel {
@@ -55,6 +59,8 @@ export class PrioridadeAlocacaoViewModel {
     viagemStatusId?: number;
     viagemStatusNome: string;
 }
+type TPrioridadeAlocacaoViewModel = keyof PrioridadeAlocacaoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoAggregate\AdicionarVeiculoViewModel.cs
 export class AdicionarVeiculoViewModel {
@@ -65,16 +71,22 @@ export class AdicionarVeiculoViewModel {
     placa: string;
     temReboque: boolean;
 }
+type TAdicionarVeiculoViewModel = keyof AdicionarVeiculoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoAggregate\AlterarVeiculoViewModel.cs
 export class AlterarVeiculoViewModel extends AdicionarVeiculoViewModel {
     id: number;
 }
+type TAlterarVeiculoViewModel = keyof AlterarVeiculoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoAggregate\VeiculoViewModel.cs
 export class VeiculoViewModel extends AlterarVeiculoViewModel {
     tipo: VeiculoTipoViewModel;
 }
+type TVeiculoViewModel = keyof VeiculoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoTipoAggregate\AdicionarVeiculoTipoViewModel.cs
 export class AdicionarVeiculoTipoViewModel {
@@ -86,6 +98,8 @@ export class AdicionarVeiculoTipoViewModel {
     tara?: number;
     placaObrigatoria: boolean;
 }
+type TAdicionarVeiculoTipoViewModel = keyof AdicionarVeiculoTipoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoTipoAggregate\VeiculoTipoCapacidadeViewModel.cs
 export class VeiculoTipoCapacidadeViewModel {
@@ -93,11 +107,15 @@ export class VeiculoTipoCapacidadeViewModel {
     peso?: number;
     volume?: number;
 }
+type TVeiculoTipoCapacidadeViewModel = keyof VeiculoTipoCapacidadeViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Application\ViewModels\VeiculoTipoAggregate\VeiculoTipoViewModel.cs
 export class VeiculoTipoViewModel extends AdicionarVeiculoTipoViewModel {
     id: number;
 }
+type TVeiculoTipoViewModel = keyof VeiculoTipoViewModel;
+
 
 // ..\longopercurso\Source\LongoPercurso\RavexSolution.LongoPercurso.Domain\AggregatesModel\VeiculoTipoAggregate\DisposicaoTipo.cs
 export class DisposicaoTipo extends Enumeration {
@@ -107,6 +125,8 @@ export class DisposicaoTipo extends Enumeration {
     static Carreta1 = new DisposicaoTipo(4, "Carreta 1");
     static Carreta2 = new DisposicaoTipo(5, "Carreta 2");
 }
+type TDisposicaoTipo = keyof DisposicaoTipo;
+
 
 // ..\identity\Source\RavexSolution.Core.Infra.CrossCutting.Identity\Interfaces\IUser.cs
 export class IUser {
@@ -118,3 +138,5 @@ export class IUser {
     idHierarquiaOrganizacional?: number;
     idUnidadeOrganizacional?: number;
 }
+type TIUser = keyof IUser;
+
