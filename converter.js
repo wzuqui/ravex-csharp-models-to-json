@@ -91,6 +91,7 @@ const createConverter = config => {
             });
 
             rows.push(`}\n`);
+            generateKeyOf(rows, enum_.Identifier);
         }
 
         return rows;
@@ -127,6 +128,7 @@ const createConverter = config => {
             });
 
             rows.push(`}\n`);
+            generateKeyOf(rows, enum_.Identifier);
         }
 
         return rows;
@@ -142,6 +144,7 @@ const createConverter = config => {
             rows.push(`    ${value[1]};`);
         });
         rows.push(`}\n`);
+        generateKeyOf(rows, enum_.Identifier);
 
         return rows;
     };
@@ -195,4 +198,11 @@ const createConverter = config => {
     return convert;
 };
 
+function generateKeyOf(rows, identifier) {
+    rows.push(`type T${identifier} = keyof ${identifier};`);
+    rows.push(`}\n`);
+}
+
+
 module.exports = createConverter;
+
