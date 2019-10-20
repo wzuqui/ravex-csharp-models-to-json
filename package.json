@@ -1,8 +1,8 @@
 {
-  "name": "csharp-models-to-typescript",
+  "name": "ravex-csharp-models-to-typescript",
   "version": "0.17.4",
-  "title": "C# models to TypeScript",
-  "author": "Jonathan Svenheden <jonathan@svenheden.com>",
+  "title": "C# 2 TypeScript",
+  "author": "Willian Luis Zuqui <willian.zuqui@ravex.com.br>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,6 +12,6 @@
     "node": ">=6.0.0"
   },
   "bin": {
-    "csharp-models-to-typescript": "./index.js"
+    "ravex-csharp-models-to-typescript": "./index.js"
   }
 }

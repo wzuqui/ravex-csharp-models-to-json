@@ -1,25 +1,20 @@
 # C# models to TypeScript
 
-This is a tool that consumes your C# domain models and types and creates TypeScript declaration files from them. There's other tools that does this but what makes this one different is that it internally uses [Roslyn (the .NET compiler platform)](https://github.com/dotnet/roslyn) to parse the source files, which removes the need to create and maintain our own parser.
+Essa é uma ferramenta que consome seus modelos e tipos de domínio C # e cria a partir deles arquivos de declaração TypeScript. Há outras ferramentas que fazem isso, mas o que diferencia essa empresa é que ela usa internamente [Roslyn (the .NET compiler platform)](https://github.com/dotnet/roslyn) para analisar os arquivos de origem, o que elimina a necessidade para criar e manter nosso próprio analisador.
 
-
-[![NPM version][npm-image]][npm-url]
-
-
-## Dependencies
+## Dependências
 
 * [.NET Core SDK](https://www.microsoft.com/net/download/macos)
 
-
-## Install
+## Instalar
 
 ```
-$ npm install --save csharp-models-to-typescript
+$ yarn install --save ravex-csharp-models-to-typescript
 ```
 
-## How to use
+## Como usar
 
-1. Add a config file to your project that contains for example...
+1. Adicione um arquivo de configuração ao seu projeto que contenha, por exemplo...
 
 ```
 {
@@ -30,7 +25,6 @@ $ npm install --save csharp-models-to-typescript
     "exclude": [
         "./models/foo/bar.cs"
     ],
-    "namespace": "Api",
     "output": "./api.d.ts",
     "camelCase": false,
     "camelCaseEnums": false,
@@ -43,20 +37,16 @@ $ npm install --save csharp-models-to-typescript
 }
 ```
 
-2. Add a npm script to your package.json that references your config file...
+2. Adicione um script npm ao seu package.json que faça referência ao seu arquivo de configuração...
 
 ```
 "scripts": {
-    "generate-types": "csharp-models-to-typescript --config=your-config-file.json"
+    "generate-types": "ravex-csharp-models-to-typescript --config=your-config-file.json"
 },
 ```
 
-3. Run the npm script `generate-types` and the output file specified in your config should be created and populated with your models.
+3. Execute o script npm `generate-types` e o arquivo de saída especificado em sua configuração deve ser criado e preenchido com seus modelos.
 
+## Licença
 
-## License
-
-MIT © [Jonathan Svenheden](https://github.com/svenheden)
-
-[npm-image]: https://img.shields.io/npm/v/csharp-models-to-typescript.svg
-[npm-url]: https://npmjs.org/package/csharp-models-to-typescript
+MIT © [Willian Luis Zuqui ](http://gitlab.ravex.local/willian.zuqui)
