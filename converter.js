@@ -199,7 +199,7 @@ const createConverter = config => {
 };
 
 function generateKeyOf(rows, identifier) {
-    rows.push(`type T${identifier} = keyof ${identifier};`);
+    rows.push(`export type T${identifier} = keyof ${identifier};`);
     rows.push(`\n`);
 }
 
