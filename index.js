@@ -29,6 +29,7 @@ try {
 }
 
 const output = config.output || 'types.d.ts';
+const beforeScript = config.beforeScript || '';
 
 const converter = createConverter({
     customTypeTranslations: config.customTypeTranslations || {},
@@ -67,7 +68,7 @@ dotnetProcess.stdout.on('end', () => {
         ].join('\n\n'));
     }
 
-    const types = converter(json);
+    const types = `${beforeScript}${converter(json)}`;
 
     fs.writeFile(output, types, err => {
         if (err) {
