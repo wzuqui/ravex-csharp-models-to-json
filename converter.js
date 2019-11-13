@@ -27,10 +27,10 @@ const defaultTypeTranslations = {
 const defaultTypeEnumeration = `export class Enumeration
 {
     public id: number;
-    public name: string;
-    constructor(id: number, name: string) {
+    public nome: string;
+    constructor(id: number, nome: string) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
     }
 }`;
 
